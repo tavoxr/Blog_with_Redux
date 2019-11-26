@@ -1,59 +1,38 @@
 import React from 'react';
+import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import Menu from './Menu';
+import Usuarios from './Usuarios';
 
+const Tareas = (props)=>{
+  return(<div>
+          Tareas
+        </div>
 
-
-const App = (props) => {
-  return(
-    <div className='margen'>
-    <table className='tabla'>
-      <thead>
-        <tr>
-          <th>
-            Nombre
-          </th>
-          <th>
-            Correo
-          </th>
-          <th>
-            Enlace
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Rodolfo
-          </td>
-          <td>
-            Tavoxr23@gmail.com
-          </td>
-          <td>
-            tavoxr.com
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Lourdes
-          </td>
-          <td>
-            lou@gmail.com
-          </td>
-          <td>
-            Lou.com
-          </td>
-        </tr>
-      </tbody>
-      
-    </table>
-    </div>
   );
+} 
 
 
 
 
 
+const App = ()=>{
+  return(
+    <BrowserRouter>
+      <Menu/>
+      <Switch>
+        
+        <Route exact path='/' component={Usuarios} />
+        <Route exact path='/tareas' component={Tareas} />
+          
+        
+      </Switch>
+    </BrowserRouter>
+    
 
+  );
 }
+
+
 
 
 export default App;
