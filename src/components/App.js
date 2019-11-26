@@ -2,9 +2,11 @@ import React from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Menu from './Menu';
 import Usuarios from './Usuarios';
+import '../index.css';
+
 
 const Tareas = (props)=>{
-  return(<div>
+  return(<div className='margen'>
           Tareas
         </div>
 
