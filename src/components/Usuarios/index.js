@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as usuariosActions from '../../actions/usuariosActions';
-
+import Spinner from '../General/Spinner';
 class Usuarios extends React.Component {
 
   
@@ -13,7 +13,7 @@ class Usuarios extends React.Component {
 
    ponerContenido = ()=>{
     if(this.props.cargando){
-      return <div className="lds-dual-ring"></div>;
+      return <Spinner/>;
     }
 
      return(

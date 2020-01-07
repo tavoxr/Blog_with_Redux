@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Menu from './Menu';
 import Usuarios from './Usuarios';
-import '../index.css';
+import '../css/index.css';
 
 
 const Tareas = (props)=>{
