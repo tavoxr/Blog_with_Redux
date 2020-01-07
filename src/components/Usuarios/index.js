@@ -11,6 +11,33 @@ class Usuarios extends React.Component {
     this.props.traerTodos();
    }
 
+   ponerContenido = ()=>{
+    if(this.props.cargando){
+      return <div className="lds-dual-ring"></div>;
+    }
+
+     return(
+      <table className='tabla'>
+        <thead>
+          <tr>
+            <th>
+              Nombre
+            </th>
+            <th>
+              Correo
+            </th>
+            <th>
+              Enlace
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.ponerFilas()}
+        </tbody>
+       </table>
+     )
+   }
+
 
    ponerFilas=()=>(
      this.props.usuarios.map((usuario)=>{
@@ -43,25 +70,7 @@ console.log(this.props.error);
 
     return(
       <div className='margen'>
-      <table className='tabla'>
-        <thead>
-          <tr>
-            <th>
-              Nombre
-            </th>
-            <th>
-              Correo
-            </th>
-            <th>
-              Enlace
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.ponerFilas()}
-        </tbody>
-        
-      </table>
+        {this.ponerContenido()}
       </div>
     );
   }
