@@ -1,5 +1,4 @@
-export const TRAER_TODOS = 'traer_usuarios';
-
+export const TRAER_PUBLI = 'traer_publicaciones';
 
 export const CARGANDO= 'cargando';
 export const ERROR= 'error';

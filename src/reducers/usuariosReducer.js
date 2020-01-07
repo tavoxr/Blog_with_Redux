@@ -1,4 +1,4 @@
-import { bindActionCreators } from "redux";
+// import { bindActionCreators } from "redux";
 import {TRAER_TODOS, CARGANDO, ERROR}  from '../types/usuariosTypes';
 const INITIAL_STATE={
     usuarios:[],
@@ -12,7 +12,8 @@ export default (state= INITIAL_STATE,action)=>{
         case TRAER_TODOS:
             return{...state, 
                    usuarios:action.payload,
-                   cargando:false
+                   cargando:false,
+                   error:''
                 };
 
         case CARGANDO:
