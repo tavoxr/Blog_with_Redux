@@ -39,3 +39,9 @@ body{
   .rojo{
     color:rgb(228, 22, 22);
   }
+
+
+  .pub_titulo{
+
+    border-top: 1px solid black;
+  }

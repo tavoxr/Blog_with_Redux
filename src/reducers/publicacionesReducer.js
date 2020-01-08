@@ -1,4 +1,4 @@
-import {TRAER_PUBLI, CARGANDO, ERROR}  from '../types/publicacionesTypes';
+import {ACTUALIZAR, CARGANDO, ERROR}  from '../types/publicacionesTypes';
 
 
   const INITIAL_STATE={
@@ -10,7 +10,7 @@ import {TRAER_PUBLI, CARGANDO, ERROR}  from '../types/publicacionesTypes';
 
 export default (state= INITIAL_STATE,action)=>{
     switch(action.type){
-        case TRAER_PUBLI:
+        case ACTUALIZAR:
             return{
                 ...state,
                 publicaciones: action.payload,
