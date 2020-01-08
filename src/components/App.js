@@ -4,15 +4,10 @@ import Menu from './Menu';
 import Usuarios from './Usuarios';
 // import '../css/index.css';
 import Publicaciones from './Publicaciones';
+import Tareas from './Tareas';
 
 
-const Tareas = (props)=>{
-  return(<div className='margen'>
-          Tareas
-        </div>
 
-  );
-} 
 
 
 

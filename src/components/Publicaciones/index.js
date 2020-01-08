@@ -6,6 +6,7 @@ import Spinner from '../General/Spinner';
 import Fatal from '../General/Fatal'
 import Comentarios from './Comentarios';
 
+
 const {traerTodos: usuariosTraerTodos}=usuariosActions;
 const {
         traerPorUsuario: publicacionesTraerPorUsuario, 
@@ -122,7 +123,7 @@ class Publicaciones extends React.Component{
                      {publicacion.body}
                  </h3>
                  {
-                     (publicacion.abierto)? <Comentarios/> : 'cerrado'
+                     (publicacion.abierto)? <Comentarios comentarios={publicacion.comentarios}/> : 'cerrado'
                  }
              </div>
              )
