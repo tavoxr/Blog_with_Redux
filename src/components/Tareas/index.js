@@ -3,13 +3,16 @@ import {connect} from 'react-redux';
 import * as tareasActions from '../../actions/tareasActions';
 import Spinner from '../General/Spinner';
 import Fatal from '../General/Fatal';
-
+import {Link} from 'react-router-dom';
 
 
 class Tareas extends React.Component{
 
     componentDidMount(){
-        this.props.traerTodas();
+        if(!Object.keys(this.props.tareas).length){
+            this.props.traerTodas();
+
+        }
     }
 
 
@@ -53,9 +56,14 @@ class Tareas extends React.Component{
         }
 
 render(){
-    console.log(this.props)
+    
     return(
         <div className='margen'>
+            <button>
+                <Link to='/tareas/guardar'>
+                    Agregar
+                </Link>
+            </button>
             {this.mostrarContenido()}
         </div>
     );
