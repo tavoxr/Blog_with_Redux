@@ -44,9 +44,16 @@ console.log(this.props.error);
 
 
     return(
-      <div className='margen'>
-        <h1> Usuarios </h1>
-        {this.ponerContenido()}
+      <div className='main_container'>
+        <div className='usua_container'>
+          <h1 className='usua_titulo'> Usuarios </h1>
+          <div className='usua_contenido'>
+           {this.ponerContenido()}
+          </div>
+         
+
+        </div>
+      
       </div>
     );
   }

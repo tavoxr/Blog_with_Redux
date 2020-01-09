@@ -20,7 +20,7 @@ const Tabla  = (props)=>{
               <td>
                 {usuario.website}
               </td>
-              <td>
+              <td className='ver_usuarios'>
                   <Link to={`/publicaciones/${key}`}>
                     <div className="eye icon"></div>
                   </Link>
@@ -36,8 +36,8 @@ const Tabla  = (props)=>{
 
   return ( 
   <div>
-        <table className='tabla'>
-        <thead>
+        <table className='usua_tabla'>
+        <thead className='titulo_tabla'>
           <tr>
             <th>
               Nombre
@@ -47,6 +47,9 @@ const Tabla  = (props)=>{
             </th>
             <th>
               Enlace
+            </th>
+            <th className='ver_usuarios_titulo'>
+              Ver
             </th>
           </tr>
         </thead>
