@@ -29,10 +29,10 @@ body{
   }
   .usua_titulo{
     grid-area: usua_titulo;
-    background: rgb(38, 70, 131);
+    /* background: rgb(38, 70, 131); */
     border-radius: 5px;
     font-family: 'Cinzel', serif;
-    color: #fff;
+    /* color: #fff; */
     padding-left: 10px;
     ;
   }
@@ -91,6 +91,34 @@ body{
   
   }
 
+
+.publi_container{
+
+width: 80%;
+
+display: grid;
+gap: 10px;
+grid-template-rows: repeat(2,auto);
+grid-template-columns: 1fr;
+grid-template-areas: 'publi_usua_name'
+                     'publis_usua';
+
+}
+
+.publi_usua_name{
+grid-area: publi_usua_name;
+font-family: 'Cinzel', serif;
+}
+
+.publis_usua{
+  grid-area: publis_usua;
+  /* background: rgb(230, 240, 250); */
+  border-radius: 8px;
+}
+
+
+
+
   .center{
       text-align: center;
   }
@@ -100,11 +128,47 @@ body{
   }
 
 
-  .pub_titulo{
+  .pub_header{
 
-    border-top: 1px solid rgb(23, 66, 116);
+    border-bottom: 0.5px solid rgb(23, 66, 116);
+    box-shadow: rgb(151, 153, 156);
     cursor: pointer;
+    background:  rgb(237, 243, 248);
+    border-radius: 8px;
   }
+
+  .pub_title{
+    font-family: 'Cinzel', serif;
+    padding: 10px 10px 0 10px ;
+  }
+
+  .pub_body{
+    padding: 0px 10px 0 10px ;
+    
+
+  }
+
+  .coments_cerrado{
+    font-size: 0.8rem;
+    padding-left: 5px;
+    display: flex;
+    justify-content:left;
+  }
+
+  .coments_container{
+    width: 99.5%;
+     background: rgb(255, 255, 255); 
+    border-radius: 8px;
+    border-bottom: 0.4px solid rgb(23, 66, 116);
+  }
+  
+  .coments_container h2{
+    margin-left: 10px;
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+   
+  }
+
 
   li{
     margin: 20px 0 20px 0;

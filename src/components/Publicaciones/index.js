@@ -112,19 +112,22 @@ class Publicaciones extends React.Component{
         publicaciones.map((publicacion,com_key)=>{
             return( 
             <div 
-                 className='pub_titulo'
+                 className='pub_header'
                  key={publicacion.id}
                  onClick={()=> this.mostrarComentarios(pub_key, com_key, publicacion.comentarios)}
                  >
-                 <h2>
+                 <h2 className='pub_title'>
                      {publicacion.title}
                  </h2>
-                 <h3>
+                 <h3 className='pub_body'>
                      {publicacion.body}
                  </h3>
+                 <div className='coments_cerrado'>
                  {
-                     (publicacion.abierto)? <Comentarios comentarios={publicacion.comentarios}/> : 'cerrado'
+                     (publicacion.abierto)? <Comentarios comentarios={publicacion.comentarios}/> : 'Ver comentarios'
                  }
+                 </div>
+                
              </div>
              )
          })
@@ -144,11 +147,20 @@ class Publicaciones extends React.Component{
     render(){
         console.log(this.props);
         return(
-            <div className='margen'>
-               
-               
-                {this.ponerUsuario()}
-                {this.ponerPublicaciones()}
+            <div className='main_container'>
+               <div className='publi_container'>
+                 
+                 <div className='publi_usua_name'>
+                     {this.ponerUsuario()}
+                 </div>
+
+                <div className='publis_usua'>
+                     {this.ponerPublicaciones()}
+                </div>
+                
+
+               </div>
+              
             </div>
 
         )

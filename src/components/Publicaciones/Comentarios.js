@@ -40,9 +40,13 @@ const Comentarios= (props)=>{
 
 
     return(
-        <ul>
-            {ponerComentarios()}
-        </ul>
+        <div className='coments_container'>
+            <h2>Comentarios</h2>
+            <ul>
+                {ponerComentarios()}
+             </ul>
+        </div>
+      
     )
 
 }
