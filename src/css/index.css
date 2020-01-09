@@ -20,7 +20,7 @@ body{
   
   
   #menu{
-    background-color: #353A46;
+    background-color: rgb(14, 27, 56);
     padding: 20px;
     font-size: 20px;
   
@@ -56,4 +56,8 @@ body{
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 70px;
+  }
+
+  .m_left{
+    margin-left: 20px;
   }
