@@ -46,7 +46,7 @@ console.log(this.props.error);
     return(
       <div className='main_container'>
         <div className='usua_container'>
-          <h1 className='usua_titulo'> Usuarios </h1>
+          <h1 className='usua_titulo'> Usuarios <span className='usua_span'>obtenidos de <a href='https://jsonplaceholder.typicode.com/' target='_blank'>https://jsonplaceholder.typicode.com/</a></span>  </h1>
           <div className='usua_contenido'>
            {this.ponerContenido()}
           </div>

@@ -92,34 +92,47 @@ class Guardar extends React.Component{
 
     render(){
         return(
-            <div className='margen'>
+            <div className='main_container'>
+                <div className='guardar_container'>
                 {
                     (this.props.regresar)? <Redirect to='/tareas'/> : ''
                 }
-                <h1>
+                <h1 className='titulo_guardar_tarea'>
                     Guardar Tarea
                 </h1>
-                Usuario id:
-                <input 
+                <div className='guardar_usua'>
+                    <p className='usuaid'> Usuario id:</p>
+                  
+                    <input className='input_guardar_usuaid'
                     type='number'
                     value={this.props.usuario_id}
                     onChange={this.cambioUsuarioId}
                 />
-                <br/> <br/>
-                Titulo:
-                <input
-                    value={this.props.titulo}
-                    onChange={this.cambioTitulo}
+                </div>
+               
+               
+                
+                <div className='guardar_titulo'>
+                    <p className='titulo_guardar'> Titulo:</p>
+                    <input className='input_guardarTitulo'
+                        value={this.props.titulo}
+                        onChange={this.cambioTitulo}
 
-                 />
-                <br/> <br/>
-                <button
+                    />
+                </div>
+               
+               
+                
+                <button className='btn_guardar'
                 onClick={this.guardar}
                 disabled={this.deshabilitar()}
                 >
                     Guardar
                 </button>
                 {this.mostrarAccion()}
+                </div>
+                
+               
             </div>
         );
     }

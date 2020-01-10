@@ -8,7 +8,7 @@ body{
     margin:100px;
   }
   
-
+/*General*/
   .main_container{
     /* background: salmon; */
     display: flex;
@@ -16,6 +16,9 @@ body{
     align-items: center;
     height: 100%;
   }
+
+
+/*USUARIOS*/
 
   .usua_container{
    width: 80%;
@@ -35,6 +38,16 @@ body{
     /* color: #fff; */
     padding-left: 10px;
     ;
+  }
+
+  .usua_span{
+    margin-left: 10px;
+    font-size: 0.9rem;
+    
+  }
+  .usua_span a{
+    text-decoration: none;
+    color: black;
   }
   .usua_contenido{
     grid-area: usua_contenido;
@@ -77,6 +90,8 @@ body{
     justify-content: center;
   }
   
+/*MENU*/
+
   #menu{
     background-color: rgb(32, 38, 51);
     padding: 20px;
@@ -91,6 +106,9 @@ body{
   
   }
 
+/*PUBLICACIONES Y COMENTARIOS*/
+/*PUBLICACIONES*/
+  
 
 .publi_container{
 
@@ -117,70 +135,255 @@ font-family: 'Cinzel', serif;
 }
 
 
+.pub_header{
+
+  border-bottom: 0.5px solid rgb(23, 66, 116);
+  box-shadow: rgb(151, 153, 156);
+  cursor: pointer;
+  background:  rgb(237, 243, 248);
+  border-radius: 8px;
+}
+
+.pub_title{
+  font-family: 'Cinzel', serif;
+  padding: 10px 10px 0 10px ;
+}
+
+.pub_body{
+  padding: 0px 10px 0 10px ;
+  
+
+}
+
+/*COMENTARIOS*/
+
+.coments_cerrado{
+  font-size: 0.8rem;
+  padding-left: 5px;
+  display: flex;
+  justify-content:left;
+}
+
+.coments_container{
+  width: 99.5%;
+   background: rgb(255, 255, 255); 
+  border-radius: 8px;
+  border-bottom: 0.4px solid rgb(23, 66, 116);
+}
+
+.coments_container h2{
+  margin-left: 10px;
+  font-size: 1rem;
+  font-family: 'Cinzel', serif;
+ 
+}
+
+/*TAREAS*/
 
 
-  .center{
+.tareas_container{
+  width: 80%;
+  margin-top: 50px;
+  
+  
+display: grid;
+gap: 10px;
+grid-template-rows: repeat(2,auto);
+grid-template-columns: 1fr;
+grid-template-areas: 'link_agregar'
+                     'tareas_contenido';
+
+}
+
+.btn_agregar{
+  
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding:10px;
+  /* margin: 10px; */
+  font-size: 1rem;
+  background: rgb(82, 219, 135);
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+.link_agregar{
+  grid-area: link_agregar;
+  text-decoration:none;
+  background: rgb(46, 83, 114);
+  width: 35%;
+  border-radius: 5px;
+  
+}
+.user_id{
+  font-family: 'Cinzel', serif;
+
+}
+
+/*TAREAS*/
+
+.tareas_contenido{
+  grid-area: tareas_contenido;
+  /* background: blueviolet; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.tarea_container{
+  background: rgb(223, 231, 241);
+  
+  border-bottom: 1px solid #000;
+  border-radius: 4px 4px;
+  /* min-width: 200px; */
+  max-width: 650px;
+  display: grid;
+gap: 4px;
+grid-template-rows: auto;
+grid-template-columns: 0.3fr 2fr 0.4fr 0.4fr;
+grid-template-areas: 'checkbox_tarea tarea_username btn_edit_cont btn_delete_cont' ;
+
+}
+
+.checkbox_tarea{
+  grid-area: checkbox_tarea;
+  margin-left: 10px;
+  margin-top: 18px;
+  background: rgb(187, 92, 92);
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+
+.tarea_username{
+grid-area: tarea_username;
+font-size: 0.9rem;
+
+/* background: #fff; */
+}
+.btn_edit_cont{
+  grid-area: btn_edit_cont;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  
+}
+.btn_edit{
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  background: rgb(31, 73, 112);
+ 
+ 
+  
+}
+
+.link_editar{
+  text-decoration: none;
+  color: #fff;
+}
+.btn_delete_cont{
+  grid-area: btn_delete_cont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn_delete{
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  background: rgb(184, 27, 27);
+  color: #fff;
+  cursor: pointer;
+
+
+}
+  /* .center{
       text-align: center;
-  }
+  } */
 
   .rojo{
     color:rgb(228, 22, 22);
   }
 
 
-  .pub_header{
+.guardar_container{
+  margin-top: 80px;
+  width: 50%;
+  background: rgb(231, 234, 236);
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 5px;
+}
 
-    border-bottom: 0.5px solid rgb(23, 66, 116);
-    box-shadow: rgb(151, 153, 156);
-    cursor: pointer;
-    background:  rgb(237, 243, 248);
-    border-radius: 8px;
-  }
+.titulo_guardar_tarea{
 
-  .pub_title{
-    font-family: 'Cinzel', serif;
-    padding: 10px 10px 0 10px ;
-  }
+font-family: 'Cinzel', serif;
+}
 
-  .pub_body{
-    padding: 0px 10px 0 10px ;
-    
+.guardar_usua{
+  display: flex;
+  justify-content: center;
+  /* background: rgb(175, 104, 104); */
+  width: 70%;
+}
 
-  }
+.usuaid{
+font-weight: bold;
+margin-right: 5px;
 
-  .coments_cerrado{
-    font-size: 0.8rem;
-    padding-left: 5px;
-    display: flex;
-    justify-content:left;
-  }
+}
 
-  .coments_container{
-    width: 99.5%;
-     background: rgb(255, 255, 255); 
-    border-radius: 8px;
-    border-bottom: 0.4px solid rgb(23, 66, 116);
-  }
-  
-  .coments_container h2{
-    margin-left: 10px;
-    font-size: 1rem;
-    font-family: 'Cinzel', serif;
-   
-  }
+.input_guardar_usuaid{
+  margin-top: 10px;
+width: 50%;
+height: 20px;
+border-radius: 4px;
+
+}
 
 
-  li{
-    margin: 20px 0 20px 0;
-  }
 
 
-  .contenedor_tareas{
-    font-size: 20px;
-    margin-top: 50px;
-    margin-bottom: 70px;
-  }
 
-  .m_left{
-    margin-left: 20px;
-  }
+
+
+.guardar_titulo{
+  display: flex;
+  justify-content: center;
+  width: 70%;
+
+}
+
+.titulo_guardar{
+margin-right: 15px;
+
+font-weight: bold;
+
+
+}
+.input_guardarTitulo{
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 50%;
+  border-radius: 4px;
+  height: 20px;
+}
+.btn_guardar{
+  border-radius: 4px;
+  /* margin-left: 50px; */
+  margin-bottom: 10px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 5px;
+  background: rgb(46, 83, 114);
+  color: #fff;
+  cursor: pointer;
+}

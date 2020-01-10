@@ -37,7 +37,7 @@ class Tareas extends React.Component{
 
         return Object.keys(tareas).map((usu_id)=>(
             <div key={usu_id}>
-                <h2>
+                <h2 className='user_id'>
                     Usuario {usu_id}
                 </h2>
                 <div className='contenedor_tareas'>
@@ -55,23 +55,32 @@ class Tareas extends React.Component{
         };
 
         return Object.keys(por_usuario).map((tar_id)=>(
-           <div key={tar_id}>
-                <input 
+           <div key={tar_id} className='tarea_container'>
+                <input className='checkbox_tarea'
                     type='checkbox' 
                     defaultChecked={por_usuario[tar_id].completed}
                     onChange={()=>cambioCheck(usu_id,tar_id)}
                     
                     />
-                {por_usuario[tar_id].title}
-                <button className='m_left'>
-                    <Link to={`/tareas/guardar/${usu_id}/${tar_id}`}>
+                    <h4 className='tarea_username'>
+                    {por_usuario[tar_id].title}
+                    </h4>
+                
+                <div className='btn_edit_cont'>
+                <button className='btn_edit'>
+                    <Link to={`/tareas/guardar/${usu_id}/${tar_id}`} className='link_editar'>
                     Editar
                     </Link>
                    
                 </button>
-                <button className='m_left' onClick={()=>eliminar(tar_id)}>
+                </div>
+                <div className='btn_delete_cont'>
+                <button className='btn_delete' onClick={()=>eliminar(tar_id)}>
                     Eliminar
                 </button>
+                </div>
+               
+                
            </div>
         ))
 
@@ -79,13 +88,24 @@ class Tareas extends React.Component{
 
 render(){
        return(
-        <div className='margen'>
-            <button>
-                <Link to='/tareas/guardar'>
-                    Agregar
+        <div className='main_container'>
+            <div className='tareas_container'>
+           
+                <Link to='/tareas/guardar' className='link_agregar'>
+                <button className="btn_agregar">
+                    AGREGAR NUEVA TAREA
+                    </button>
                 </Link>
-            </button>
+           
+            <div className='tareas_contenido'>
             {this.mostrarContenido()}
+            </div>
+          
+
+
+            </div>
+            
+          
         </div>
     );
 }
