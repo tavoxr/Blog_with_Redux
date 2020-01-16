@@ -35,7 +35,7 @@ const Tabla  = (props)=>{
 
 
   return ( 
-  <div>
+  <div >
         <table className='usua_tabla'>
         <thead className='titulo_tabla'>
           <tr>
